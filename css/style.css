@@ -79,16 +79,14 @@ body {
     border-bottom: 2px solid #0065fc;
   }
 }
-  .body {
-    width: 100%;
-    padding: 0 50px;
-    box-sizing: border-box;
-  }
-  .search-bar {
-    width: 377px;
-    height: 79px
-    margin: 24px 0;
+.body {
+  width: 100%;
+  padding: 0 50px;
+  box-sizing: border-box;
 
+  style="color: #000000;" > </i > .button {
+    background-color: var(--main-color);
+    border-radius: 20px;
   }
 }
 <--Most Popular-- > .card {
