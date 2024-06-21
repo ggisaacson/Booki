@@ -401,13 +401,40 @@ body {
 }
 
 /********* Media Queries ***********/
-/* Tablet:  1024px and below */
-/* @media (max-width: 1024px) {
-    .main-container {
-        padding: 0 30px;
-    
- 
-
+/* Tablet: 1024px and below */
+@media (max-width: 1024px) {
+  .main-container {
+    width: 100%;
+  }
+  .header {
+  }
+  .nav-bar {
+  }
+  .logo img {
+  }
+  .search-bar {
+  }
+  .search-bar input {
+  }
+  .search-button {
+  }
+  .Filter-Bar {
+  }
+  .filter-buttons {
+  }
+  .accommodation-and-popular {
+  }
+  .accommodation-cards {
+  }
+  .popular-cards {
+  }
+  .activities {
+  }
+  .activities img {
+  }
+  .footer {
+  }
+}
 
 /* Mobile : 768px and below*/
 @media (max-width: 768px) {
@@ -415,47 +442,43 @@ body {
     padding: 0 15px;
     width: 100%;
   }
-
   .header {
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 20px 0;
     width: 100%;
-    height: auto;
   }
   .nav-bar {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .nav-bar-links a {
+    margin: 0 10px;
+    white-space: nowrap;
   }
 
   .logo img {
-    margin: 0;
-    padding: 10px;
-    margin-left: -100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 20px;
   }
 
   .logo {
-    margin: 10px 0;
     display: flex;
-    justify-content: space-evenly;
-
-    /* .nav-bar-links {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .nav-bar-links a {
-      text-align: center;
-    }
-
-    .nav-bar-links a:hover::before {
-      border-bottom: 1px solid #0065fc;
-    } */
+    justify-content: center;
   }
-  .info-group {
-    padding: 0 20px 0 20px;
+  .nav-bar-links {
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-bar-links a:hover {
+    color: #0065fc;
+    border-bottom: 1px solid #0065fc;
+    border-top: none;
   }
 
   .search-bar {
@@ -512,8 +535,8 @@ body {
   }
 
   .section-activities {
-    padding: 30px;
-    gap: 30px;
+    width: 100%;
+    padding: revert-layer;
   }
   .section-activities h2 {
     margin: 10px;
@@ -523,9 +546,13 @@ body {
     flex-direction: column;
   }
   .activities img {
-    width: 100%;
+    width: 315px;
     height: 141px;
     object-fit: cover;
+  }
+  .activity {
+    width: 315px;
+    height: 200px;
   }
 
   .footer {
@@ -536,5 +563,11 @@ body {
   }
 
   .Our-Accommodations {
+    margin: 0;
+    padding: 20px;
+  }
+  .Support {
+    margin: 0;
+    padding: 20px;
   }
 }
