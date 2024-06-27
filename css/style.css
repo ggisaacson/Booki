@@ -62,7 +62,7 @@ body {
 .nav-bar-links a {
   color: #000000;
   text-decoration: none;
-  padding: 10px 30px;
+  padding: 0 20px;
 }
 .nav-bar-links a:hover {
   color: #0065fc;
@@ -402,42 +402,12 @@ body {
 
 /********* Media Queries ***********/
 /* Tablet: 1024px and below */
-@media (max-width: 1024px) {
-  .main-container {
-    width: 100%;
-  }
-  .header {
-  }
-  .nav-bar {
-  }
-  .logo img {
-  }
-  .search-bar {
-  }
-  .search-bar input {
-  }
-  .search-button {
-  }
-  .Filter-Bar {
-  }
-  .filter-buttons {
-  }
-  .accommodation-and-popular {
-  }
-  .accommodation-cards {
-  }
-  .popular-cards {
-  }
-  .activities {
-  }
-  .activities img {
-  }
-  .footer {
-  }
-}
+
+/* @media (min-wdith: 768px) and (max-width: 1024px) {
+  
 
 /* Mobile : 768px and below*/
-@media (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 768px) {
   .main-container {
     padding: 0 15px;
     width: 100%;
@@ -471,8 +441,10 @@ body {
     justify-content: center;
   }
   .nav-bar-links {
-    margin: 0;
-    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
   }
 
   .nav-bar-links a:hover {
@@ -526,17 +498,20 @@ body {
   }
 
   .accommodation-cards {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
   }
   .popular {
     width: 100%;
   }
+  popular-cards .card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
 
   .section-activities {
     width: 100%;
-    padding: revert-layer;
   }
   .section-activities h2 {
     margin: 10px;
@@ -565,9 +540,13 @@ body {
   .Our-Accommodations {
     margin: 0;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
   }
   .Support {
     margin: 0;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
   }
 }
