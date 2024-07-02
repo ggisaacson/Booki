@@ -29,8 +29,8 @@
  
   <body>
     <div class="main-container">
-    <header class="header">
-        <div class="nav-bar"> 
+    <header>
+        <!-- <div class="nav-bar"> 
               <div class="logo"> 
             <img class="logo" src="images/logo/Booki@3x.png" alt="Booki Logo" />
           </div>
@@ -39,7 +39,17 @@
                 <a href="#">Accommodations</a>
                 <a href="#">Things to Do</a>
           </nav>
-         </div>
+         </div> -->
+        
+            <div class="logo"> 
+                <img class="" src="images/logo/Booki@3x.png" alt="Booki Logo" />
+            </div>
+            <nav>  
+                <a href="#accommodation">Accommodations</a>
+                <a href="#thingstodo">Things to Do</a>
+            </nav>
+       
+            
     </header>
 
       <main>
@@ -60,10 +70,10 @@
           <section class="Filter-Bar">
             <span>Filters</span>
             <div class="filter-buttons"> 
-            <button type="button"><i class="fa-solid fa-money-bill-wave" style="color: #0065fc;"></i>Budget</button>
-            <button type="button"><i class="fa-solid fa-person" style="color: #0065fc;"></i>Family-Friendly</button>
-            <button type="button"><i class="fa-solid fa-heart" style="color: #0065fc;"></i>Romantic</button>
-            <button type="button"><i class="fa-solid fa-fire" style="color: #0065fc;"></i>Our Top Picks</button>
+                <button type="button"><i class="fa-solid fa-money-bill-wave" style="color: #0065fc;"></i>Budget</button>
+                <button type="button"><i class="fa-solid fa-person" style="color: #0065fc;"></i>Family-Friendly</button>
+                <button type="button"><i class="fa-solid fa-heart" style="color: #0065fc;"></i>Romantic</button>
+                <button type="button"><i class="fa-solid fa-fire" style="color: #0065fc;"></i>Our Top Picks</button>
             </div>
           </section>
 
@@ -74,7 +84,7 @@
           </section>
         </div>
 
-        <div class="accommodation-and-popular">
+        <div id="accommodation" class="accommodation-and-popular">
           <section class="accommodation">
             <div class="title">
               <h2 class="section-title">Marseille Accommodations</h2>
@@ -272,7 +282,7 @@
 
         <!-- <------ THINGS TO DO Section ------> 
 
-        <div class="section-activities">
+        <div id="thingstodo" class="section-activities">
           <h2>Things to do in Marseille</h2>
           <div class="activities">
             <div class="activity">
@@ -294,7 +304,6 @@
         </main>
 
         <footer>
-            <div class="footer " >
             <ul class="about">
                 <li><a href="#"><span> About</span></a></li>
                 <li><a href="#">Using the Website</a></li>
@@ -311,7 +320,6 @@
                 <li><a href="#">Help Center</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
-            </div>
         </footer>
       </div>
   </body>
