@@ -19,7 +19,8 @@ body {
 }
 
 .main-container {
-    width: 100%;
+    width: 1300px;
+    margin: 0 auto;
     padding: 0 50px;
     box-sizing: border-box;
 }
@@ -54,8 +55,9 @@ body {
 
 /****** Accommodation And Popular ***********/
 .accommodation-and-popular {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
 }
 
 .accommodation-and-popular section {
@@ -67,12 +69,14 @@ body {
 
 /****** Accommodation ***********/
 .accommodation {
-    width: 65%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
 /****** Popular ***********/
 .popular {
-    width: 32%;
+    /* width: 1fr; */
 }
 
 .popular-title {
