@@ -1,5 +1,2 @@
 # booki-starter-pack
-hello
-
-
-My name is Ariel
+Intro porject to HTML and CSS
