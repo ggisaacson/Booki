@@ -1,2 +1,2 @@
 # booki-starter-pack
-Intro porject to HTML and CSS
+Intro project to HTML and CSS
