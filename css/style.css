@@ -316,3 +316,24 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+
+.C-title {
+    font-size: 17pt;
+    font-weight: bold;
+}
+
+.list-links {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.list-link {
+    color: var(--main-color);
+    font-size: 15pt;
+    text-decoration: none;
+}
+
+.list-link:hover {
+    text-decoration: underline;
+}
