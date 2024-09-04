@@ -35,6 +35,10 @@ body {
         list-style: none;
         gap: 20px;
     }
+
+    .booki-logo {
+        padding: 0 15px;
+    }
 }
 
 main {
@@ -91,6 +95,13 @@ main {
 }
 
 /*header*/
+
+.search-container-bar {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
 .nav-buttons {
     list-style: none;
     display: flex;
