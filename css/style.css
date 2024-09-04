@@ -13,15 +13,46 @@
     color: var(--main-color);
 }
 
+head {
+	.logo {
+		color: var(--main-color);
+	}
+
+	ul {
+		display: flex;
+		list-style: none;
+	}
+}
 body {
     display: flex;
     justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    }
+
+    .booki-logo {
+        padding: 0 15px;
+    }
+}
+
+
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 .main-container {
-    width: 100%;
-    padding: 0 50px;
-    box-sizing: border-box;
+    outline: 1px solid red; 
+    margin: auto;
+    max-width: 1340px;
+    width: 90%;
 }
 
 .section-title {
@@ -44,7 +75,7 @@ body {
     font-size: 16px;
 }
 
-.euro {
+.USD {
     font-weight: 700;
 }
 
@@ -52,13 +83,72 @@ body {
     color: var(--main-bg-color)
 }
 
+/*header*/
+
+.search-container-bar {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.nav-buttons {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 0;
+  }
+  
+  li {
+    outline: 1px;
+  }
+  
+  .nav-button {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .nav-button::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 100%;
+    height: 4px; 
+    background-color: blue;
+    transform: scaleX(0); 
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav-button:hover::before {
+    transform: scaleX(1); 
+  }
+  
+  @media (max-width: 768px) {
+    .nav {
+      flex-direction: column;
+    }
+  
+    .nav-button {
+      width: 100%;
+    }
+  }
+
 /****** Accommodation And Popular ***********/
 .accommodation-and-popular {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 30px;
 }
 
 .accommodation-and-popular section {
+    /* targets both accomidation and popular <section> elements */
     background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
@@ -67,23 +157,82 @@ body {
 
 /****** Accommodation ***********/
 .accommodation {
-    width: 65%;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    
+}
+
+.accommodation-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.accommodation-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px
+}
+
+.accommodation-cards .card {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 10px;
+    height: 250px;
+
+}
+
+.accommodation-cards img {
+    object-fit: cover;
+    width: 100%;
+    height: 114px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+.accommodation-cards .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.accommodation-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.popular-cards .card-subtitle {
+    margin: 0;
+}
+
+.popular-cards .card-rating {
+    margin-bottom: 5px;
 }
 
 /****** Popular ***********/
 .popular {
-    width: 32%;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 10px;
 }
 
 .popular-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .popular-cards .card {
     display: flex;
     margin-top: 33px;
+    /* width: 350px */
 }
 
 .popular-cards img {
@@ -113,4 +262,84 @@ body {
 
 .popular-cards .card-rating {
     margin-bottom: 5px;
+}
+
+/* activities */
+
+
+.activity-container {
+
+}
+
+.activities {
+    display: flex;
+    flex-direction: column;
+}
+
+.activities-section-title {
+    font-style: 20px;
+}
+
+.activities-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.activities-cards .postcard {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.541));
+    max-width: 300px;
+}
+
+.postcard {
+}
+
+.postcard img {
+    object-fit: cover;
+    width: 100%;
+    height: 85%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom: 150px;
+}
+
+footer {
+    display: grid;
+    gap: 50px;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.C-title {
+    font-size: 17pt;
+    font-weight: bold;
+}
+
+.list-links {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 5px;
+}
+
+.list-link {
+    color: var(--main-color);
+    font-size: 15pt;
+    text-decoration: none;
+}
+
+.list-link:hover {
+    text-decoration: underline;
 }
